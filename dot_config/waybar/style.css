@@ -8,50 +8,50 @@ window#waybar {
   background-color: #4c566a;
 }
 
-window#waybar.google-chrome {
+window#waybar.chromium {
   background-color: #000000;
 }
 
-.google-chrome #workspaces button.focused {
+.chromium #workspaces button.focused {
   color: #000000;
 }
 
-.google-chrome #clock,
-.google-chrome #tray,
-.google-chrome #window,
-.google-chrome #custom-right
+.chromium #clock,
+.chromium #tray,
+.chromium #window,
+.chromium #custom-right
 {
   background-color: #212121;
 }
 
-.google-chrome #language,
-.google-chrome #language,
-.google-chrome #battery,
-.google-chrome #bat2,
-.google-chrome #network,
-.google-chrome #backlight,
-.google-chrome #custom-vpn,
-.google-chrome #custom-pacman,
-.google-chrome #custom-left
+.chromium #language,
+.chromium #language,
+.chromium #battery,
+.chromium #bat2,
+.chromium #network,
+.chromium #backlight,
+.chromium #custom-vpn,
+.chromium #custom-pacman,
+.chromium #custom-left
 {
   background-color: #424242;
 }
 
-.google-chrome #custom-right2,
-.google-chrome #custom-left
+.chromium #custom-right2,
+.chromium #custom-left
 {
   color: #212121;
 }
 
-.google-chrome #custom-left3 {
+.chromium #custom-left3 {
   color: #424242;
 }
 
-.google-chrome #custom-right {
+.chromium #custom-right {
   color: #ECEFF4;
 }
 
-.google-chrome #workspaces
+.chromium #workspaces
 {
   background-color: #ECEFF4;
 }
