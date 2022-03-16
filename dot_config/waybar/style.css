@@ -8,12 +8,12 @@ window#waybar {
   background-color: #4c566a;
 }
 
-window#waybar.chromium {
+/* Start: Chromium rewrite styles */
+/* window#waybar.chromium {
   background-color: #000000;
 }
 
-/* Start: Chromium rewrite styles */
-/* .chromium #workspaces button.focused {
+.chromium #workspaces button.focused {
   color: #000000;
 }
 
