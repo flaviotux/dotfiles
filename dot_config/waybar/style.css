@@ -1,5 +1,5 @@
 * {
-  font-family: Roboto, Helvetica, Arial, sans-serif, Fira Code Nerd Font;
+  font-family: Fira Code Nerd Font, monospace;
   font-size: 12px;
   border-radius: 0;
 }
@@ -72,14 +72,14 @@ window#waybar.chromium {
 #custom-media
 {
   color: #ECEFF4;
-  padding: 0 10px;
+  padding: 2px 10px 0px;
   margin: 0;
 }
 
 #clock,
 #tray
 {
-  background-color: #3B4252;
+  background-color: #434C5E;
 }
 
 #language,
@@ -89,15 +89,12 @@ window#waybar.chromium {
 #backlight,
 #custom-vpn,
 #custom-pacman {
-  background-color: #434C5E;
+  background-color: #3B4252;
 }
 
 #window {
   background-color: #3B4252;
   color: #ECEFF4;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 4px;
 }
 
 #window label {
@@ -113,10 +110,10 @@ window#waybar.chromium {
 }
 
 #workspaces button {
-  padding: 0 10px;
-  color: rgba(76, 86, 106, 0.5);
+  padding: 0px;
+  margin: 0 5px;
+  color: rgba(76, 86, 106, 0.3);
   background-color: transparent;
-  font-size: x-large;
 }
 
 #workspaces button:hover {
@@ -157,8 +154,8 @@ window#waybar.chromium {
 }
 
 #custom-left {
-  color: #3B4252;
-  background-color: #434C5E;
+  color: #434C5E;
+  background-color: #3B4252;
 }
 
 #custom-left2, #custom-left4 {
@@ -166,7 +163,7 @@ window#waybar.chromium {
 }
 
 #custom-left3 {
-  color: #434C5E;
+  color: #3B4252;
 }
 
 #custom-left4 {

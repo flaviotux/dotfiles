@@ -23,7 +23,7 @@ set $menu dmenu_path | wofi --show=drun -i | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.backgrounds/nord.jpg fill
+output * bg ~/.backgrounds/montain-forest-green.png fill
 #
 # Example configuration:
 #
@@ -52,8 +52,8 @@ for_window {
     [app_id="chromium"] move container to workspace number 2
     [class="Code"] move container to workspace number 3
     [class="Slack"] move container to workspace number 4
-    [class=¨"Spotify" instance="spotify"] move container to workspace number 5
-    [class=¨"discord"] move container to workspace number 6
+    [class=¨"discord"] move container to workspace number 4
+    [instance="spotify"] move container to workspace number 5
 }
 
 ### Idle configuration
