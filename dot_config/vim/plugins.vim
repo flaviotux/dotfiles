@@ -6,6 +6,7 @@ endif
 
 call plug#begin()
 
+Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 
 Plug 'vim-airline/vim-airline'

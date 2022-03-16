@@ -1,3 +1,6 @@
+scriptencoding utf-8
+source ~/.config/vim/plugins.vim
+
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
@@ -62,7 +65,20 @@ set hlsearch
 " Set the commands to save in history default number is 20.
 set history=1000
 
+" Don't dispay mode in command line (airilne already shows it)
+set noshowmode
+
+" Change vertical split character to be a space (essentially hide it)
+set fillchars+=vert:.
+
+" Set preview window to appear at bottom
+set splitbelow
+
+set termguicolors
+let background = "dark"
 colorscheme nord
 
+" Vim airline theme
+let g:airline_theme = "nord"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
