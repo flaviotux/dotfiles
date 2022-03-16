@@ -33,7 +33,7 @@ output * bg ~/.backgrounds/montain-forest-green.png fill
 gaps inner 7
 default_border pixel 2
 
-set $ultrawide DP-1
+set $ultrawide HDMI-A-2
 set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
@@ -276,10 +276,10 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Shift+Print exec grim - | wl-copy
 
 # capture the specified screen area to clipboard    
-bindsym Shift+Alt+Print exec grim -g "$(slurp)" - | wl-copy
+bindsym Ctrl+Shift+Print exec slurp | grim -g - - | wl-copy
 
 # capture the focused monitor to clipboard    
-bindsym Shift+Ctrl+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+bindsym Alt+Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | grim -g - - | wl-copy
 
 #
 # Executer
