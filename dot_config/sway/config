@@ -50,6 +50,8 @@ for_window {
     [app_id="Alacritty"] move container to workspace number 1
     [app_id="google-chrome"] move container to workspace number 2
     [app_id="chromium"] move container to workspace number 2
+    [app_id="firefox"] move container to workspace number 2
+    [app_id="firefox-developer-edition"] move container to workspace number 2
     [class="Code"] move container to workspace number 3
     [class="Slack"] move container to workspace number 4
     [class=¨"discord"] move container to workspace number 4
