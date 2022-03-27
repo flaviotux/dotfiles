@@ -97,7 +97,7 @@ input {
         xkb_variant thinkpad
     }
 
-    '1133:45901:Keyboard_K850_Keyboard' {
+    1133:16482:Logitech_K850 {
         xkb_layout us
         xkb_variant alt-intl
         xkb_model logicfn
@@ -286,9 +286,15 @@ bindsym Alt+Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and 
 #
 # Executer
 #
+
+# Notification center
 exec mako
+
+# Slack startuo system
 exec slack
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Authentication agent
+exec /usr/libexec/polkit-gnome-authentication-agent-1
 
 #
 # Status Bar:
