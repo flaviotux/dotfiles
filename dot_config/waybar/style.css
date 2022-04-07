@@ -8,57 +8,6 @@ window#waybar {
   background-color: #4c566a;
 }
 
-/* Start: Chromium rewrite styles */
-/* window#waybar.chromium {
-  background-color: #000000;
-}
-
-.chromium #workspaces button.focused {
-  color: #000000;
-}
-
-.chromium #clock,
-.chromium #tray,
-.chromium #window,
-.chromium #custom-right
-{
-  background-color: #212121;
-}
-
-.chromium #language,
-.chromium #language,
-.chromium #battery,
-.chromium #bat2,
-.chromium #network,
-.chromium #backlight,
-.chromium #custom-vpn,
-.chromium #custom-pacman,
-.chromium #custom-left
-{
-  background-color: #424242;
-}
-
-.chromium #custom-right2,
-.chromium #custom-left
-{
-  color: #212121;
-}
-
-.chromium #custom-left3 {
-  color: #424242;
-}
-
-.chromium #custom-right {
-  color: #ECEFF4;
-}
-
-.chromium #workspaces
-{
-  background-color: #ECEFF4;
-} */
-
-/* End: Chromium rewrite styles */
-
 #clock,
 #pulseaudio,
 #tray,
@@ -70,7 +19,7 @@ window#waybar {
 #bat2,
 #network,
 #backlight,
-#custom-pacman,
+#custom-dnf,
 #custom-vpn,
 #custom-media
 {
@@ -91,7 +40,7 @@ window#waybar {
 #network,
 #backlight,
 #custom-vpn,
-#custom-pacman {
+#custom-dnf {
   background-color: #3B4252;
 }
 

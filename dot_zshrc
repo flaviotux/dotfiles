@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -106,6 +106,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# general use
+alias ls='exa --icons'                                                # ls
+alias l='ls -lbF --git'                                               # list, size, type, git
+alias ll='ls -lbGF --git'                                             # long list
+alias llm='ls -lbGd --git --sort=modified'                            # long list, modified date sort
+alias la='ls -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+alias lx='ls -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+
+# specialty views
+alias lS='ls -1'                                                       # one column, just names
+alias lt='ls --tree --level=2'                                         # tree
+alias vim='lvim'
 
 # Set Firefox use wayland window protocol
 MOZ_ENABLE_WAYLAND=1
@@ -117,3 +129,5 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

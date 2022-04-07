@@ -34,11 +34,19 @@ gaps inner 7
 default_border pixel 2
 
 set $ultrawide HDMI-A-2
+set $external HDMI-A-2
 set $laptop eDP-1
+
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
-output $ultrawide mode 2560x1080@75Hz
+output {
+  $ultrawide mode 2560x1080@75Hz
+  
+  $external mode 1920x1080@60Hz pos 1476,0
+
+  $laptop mode 1920x1080@60Hz scale 1.3 pos 0,250
+}
 
 #colors:                border  backgr. text     ind.
 client.focused          #88c0d0 #88c0d0 #2E3440 #88c0d0
@@ -47,15 +55,15 @@ client.unfocused        #434c5e #2e3440 #ECEFF4 #4c566a
 client.urgent           #bf616a #bf616a #ECEFF4 #bf616a
 
 for_window {
-    [app_id="Alacritty"] move container to workspace number 1
-    [app_id="google-chrome"] move container to workspace number 2
-    [app_id="chromium"] move container to workspace number 2
-    [app_id="firefox"] move container to workspace number 2
-    [app_id="firefox-developer-edition"] move container to workspace number 2
-    [class="Code"] move container to workspace number 3
-    [class="Slack"] move container to workspace number 4
-    [class=¨"discord"] move container to workspace number 4
-    [instance="spotify"] move container to workspace number 5
+  [app_id="Alacritty"] move container to workspace number 2
+  [app_id="google-chrome"] move container to workspace number 3
+  [app_id="chromium"] move container to workspace number 3
+  [app_id="firefox"] move container to workspace number 3
+  [app_id="firefox-developer-edition"] move container to workspace number 3
+  [class="Code"] move container to workspace number 4
+  [class="Slack"] move container to workspace number 1
+  [class=¨"discord"] move container to workspace number 1
+  [instance="spotify"] move container to workspace number 5
 }
 
 ### Idle configuration
@@ -71,9 +79,9 @@ for_window {
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-    timeout 300 'swaylock -f -c 2E3440' \
-    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 2E3440'
+  timeout 300 'swaylock -f -c 2E3440' \
+  timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 2E3440'
 
 ### Input configuration
 #
@@ -90,24 +98,30 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 
 input {
-    * xkb_numlock enable
+  * xkb_numlock enable
 
-    type:keyboard {
-        xkb_layout br
-        xkb_variant thinkpad
-    }
+  type:keyboard {
+    xkb_layout br
+    xkb_variant thinkpad
+  }
 
-    1133:16482:Logitech_K850 {
-        xkb_layout us
-        xkb_variant alt-intl
-        xkb_model logicfn
-    }
+  1133:16482:Logitech_K850 {
+    xkb_layout us
+    xkb_variant alt-intl
+    xkb_model logicfn
+  }
 
-    type:touchpad {
-        dwt enabled
-        tap enabled
-        middle_emulation enabled
-    }
+  1133:45929:MX_Keys_Mini_Keyboard {
+    xkb_layout us
+    xkb_variant alt-intl
+    xkb_model logicfn
+  }
+
+  type:touchpad {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+  }
 }
 
 ### Key bindings
@@ -160,6 +174,7 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
+
 # Ditto, with arrow keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -169,8 +184,8 @@ bindsym $mod+Shift+Right move right
 # Workspaces:
 #
 # Switch to workspace
-bindsym $mod+Alt+Left workspace prev
-bindsym $mod+Alt+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
 
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -236,24 +251,24 @@ bindsym $mod+minus scratchpad show
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+  # left will shrink the containers width
+  # right will grow the containers width
+  # up will shrink the containers height
+  # down will grow the containers height
+  bindsym $left resize shrink width 10px
+  bindsym $down resize grow height 10px
+  bindsym $up resize shrink height 10px
+  bindsym $right resize grow width 10px
 
-    # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+  # Ditto, with arrow keys
+  bindsym Left resize shrink width 10px
+  bindsym Down resize grow height 10px
+  bindsym Up resize shrink height 10px
+  bindsym Right resize grow width 10px
 
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  # Return to default mode
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
@@ -296,12 +311,15 @@ exec slack
 # Authentication agent
 exec /usr/libexec/polkit-gnome-authentication-agent-1
 
+# Paloalto GlobalProtect socket
+exec /opt/paloaltonetworks/globalprotect/PanGPA start
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    swaybar_command waybar
+  swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
