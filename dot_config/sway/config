@@ -23,7 +23,8 @@ set $menu dmenu_path | wofi --show=drun -i | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.backgrounds/montain-forest-green.png fill
+output * bg ~/.backgrounds/evening-sunset-mountains-firewatch.jpg fill
+
 #
 # Example configuration:
 #
@@ -105,16 +106,9 @@ input {
     xkb_variant thinkpad
   }
 
-  1133:16482:Logitech_K850 {
-    xkb_layout us
-    xkb_variant alt-intl
-    xkb_model logicfn
-  }
-
   1133:45929:MX_Keys_Mini_Keyboard {
     xkb_layout us
     xkb_variant alt-intl
-    xkb_model logicfn
   }
 
   type:touchpad {
