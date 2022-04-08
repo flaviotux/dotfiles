@@ -20,6 +20,7 @@ window#waybar {
 #network,
 #backlight,
 #custom-dnf,
+#custom-pacman,
 #custom-vpn,
 #custom-media
 {
@@ -40,7 +41,9 @@ window#waybar {
 #network,
 #backlight,
 #custom-vpn,
-#custom-dnf {
+#custom-dnf,
+#custom-pacman
+{
   background-color: #3B4252;
 }
 

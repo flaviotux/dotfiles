@@ -24,7 +24,7 @@
         "custom/left2",
         "cpu",
         "custom/left3",
-        "custom/dnf",
+        "custom/pacman",
         "custom/vpn",
         "network",
         "sway/language",
@@ -162,6 +162,15 @@
         "exec": "dnf check-update | grep 'updates' | wc -l",
         "exec-if": "exit 0",
         "signal": 8
+    },
+
+    "custom/pacman": {
+       "format": "  {}",
+       "interval": 3600,                     // every hour
+       "exec": "paru -Qu | wc -l",       // # of updates
+       "exec-if": "exit 0",                  // always run; consider advanced run conditions
+       "on-click": "alacritty -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+       "signal": 8
     },
 
     "custom/vpn": {

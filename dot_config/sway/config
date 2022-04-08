@@ -303,7 +303,7 @@ exec mako
 exec slack
 
 # Authentication agent
-exec /usr/libexec/polkit-gnome-authentication-agent-1
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Paloalto GlobalProtect socket
 exec /opt/paloaltonetworks/globalprotect/PanGPA start
