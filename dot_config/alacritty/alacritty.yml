@@ -13,3 +13,8 @@ window:
 font:
   normal:
     family: MesloLGS Nerd Font
+
+shell:
+  program: /usr/bin/zsh
+  args:
+    - --login

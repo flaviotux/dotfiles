@@ -14,7 +14,8 @@
         "custom/right",
         "sway/window",
         "custom/right2",
-        "custom/media"
+        "custom/media",
+        "upower"
     ],
 
     "modules-right": [
@@ -40,12 +41,12 @@
         "format": "{icon}", 
         "format-icons": {
             "2": "",
-            "3": "",
+            "3": "",
             "4": "﬏",
             "1": "",
             "5": "",
             "urgent": "",
-            "focused": "",
+            "focused": "",
             "default": ""
         }
     },
@@ -119,10 +120,10 @@
     },
 
     "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-wifi": "  {ipaddr}/{cidr}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
 
@@ -166,17 +167,17 @@
 
     "custom/pacman": {
        "format": "  {}",
-       "interval": 3600,                     // every hour
-       "exec": "paru -Qu | wc -l",       // # of updates
-       "exec-if": "exit 0",                  // always run; consider advanced run conditions
-       "on-click": "alacritty -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+       "interval": 3600,
+       "exec": "yay -Qu | wc -l",
+       "exec-if": "exit 0",
+       "on-click": "alacritty -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
        "signal": 8
     },
 
     "custom/vpn": {
         "format": " VPN",
         "exec": "echo '{\"class\": \"connected\"}'",
-        "exec-if": "test -d /proc/sys/net/ipv4/conf/tun0",
+        "exec-if": "cat /proc/sys/net/ipv4/conf/gpd0/forwarding | test",
         "return-type": "json",
         "interval": 5
     },
@@ -186,6 +187,13 @@
         "max-length": 40,
         "tooltip": false,
         "icon": false
+    },
+
+    "upower": {
+        "icon-size": 20,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 20
     },
 
     "custom/left": {
