@@ -23,7 +23,7 @@ set $menu dmenu_path | wofi --show=drun -i | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.backgrounds/evening-sunset-mountains-firewatch.jpg fill
+output "*" bg ~/.backgrounds/firewatch-sunset.jpg fill
 
 #
 # Example configuration:
@@ -42,9 +42,7 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output {
-  $ultrawide mode 2560x1080@75Hz
-  
-  $external mode 1920x1080@60Hz pos 1476,0
+  $external mode 2560x1080@75Hz pos 1476,0
 
   $laptop mode 1920x1080@60Hz scale 1.3 pos 0,250
 }
@@ -101,12 +99,12 @@ exec swayidle -w \
 input {
   * xkb_numlock enable
 
-  type:keyboard {
+  6058:20564:ThinkPad_Extra_Buttons {
     xkb_layout br
     xkb_variant thinkpad
   }
 
-  1133:45929:MX_Keys_Mini_Keyboard {
+  type:keyboard {
     xkb_layout us
     xkb_variant alt-intl
   }

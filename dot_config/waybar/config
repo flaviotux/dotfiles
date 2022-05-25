@@ -14,8 +14,7 @@
         "custom/right",
         "sway/window",
         "custom/right2",
-        "custom/media",
-        "upower"
+        "custom/media"
     ],
 
     "modules-right": [
