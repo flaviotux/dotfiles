@@ -18,7 +18,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show=drun -i | xargs swaymsg exec --
+#set $menu dmenu_path | wofi --show=drun -i | xargs swaymsg exec --
+set $menu onagre
 
 ### Output configuration
 #
@@ -59,10 +60,10 @@ for_window {
   [app_id="chromium"] move container to workspace number 3
   [app_id="firefox"] move container to workspace number 3
   [app_id="firefox-developer-edition"] move container to workspace number 3
-  [class="Code"] move container to workspace number 4
+  [class="Code"] move container to workspace number 2
   [class="Slack"] move container to workspace number 1
   [class=¨"discord"] move container to workspace number 1
-  [instance="spotify"] move container to workspace number 5
+  [instance="spotify"] move container to workspace number 4
 }
 
 ### Idle configuration
