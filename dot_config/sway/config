@@ -35,7 +35,6 @@ output "*" bg ~/.backgrounds/firewatch-sunset.jpg fill
 gaps inner 7
 default_border pixel 2
 
-set $ultrawide HDMI-A-2
 set $external HDMI-A-2
 set $laptop eDP-1
 
@@ -45,7 +44,7 @@ bindswitch --reload --locked lid:off output $laptop enable
 output {
   $external mode 2560x1080@75Hz pos 1476,0
 
-  $laptop mode 1920x1080@60Hz scale 1.3 pos 0,250
+  $laptop mode 1920x1080@60Hz pos 0,0
 }
 
 #colors:                border  backgr. text     ind.
@@ -177,8 +176,8 @@ bindsym $mod+Shift+Right move right
 # Workspaces:
 #
 # Switch to workspace
-bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+Right workspace next
+bindsym Ctrl+Alt+Left workspace prev
+bindsym Ctrl+Alt+Right workspace next
 
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2

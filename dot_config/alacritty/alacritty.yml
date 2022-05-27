@@ -8,7 +8,8 @@ window:
   padding:
     x: 7
     y: 7
-  opacity: 0.93
+
+  gtk_theme_variant: dark
 
 font:
   normal:

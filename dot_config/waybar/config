@@ -25,9 +25,9 @@
         "cpu",
         "custom/left3",
         "custom/pacman",
+        "idle_inhibitor",
         "custom/vpn",
         "network",
-        "sway/language",
         "battery",
         "battery#bat2",
         "custom/left",
@@ -54,7 +54,7 @@
     },
 
     "idle_inhibitor": {
-        "format": "{icon} ",
+        "format": "{icon} inhibitor",
         "format-icons": {
             "activated": "",
             "deactivated": ""
@@ -118,7 +118,7 @@
     },
 
     "network": {
-        "format-wifi": "  {ipaddr}/{cidr}",
+        "format-wifi": "  {essid}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "disconnected ⚠",

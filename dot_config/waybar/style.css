@@ -22,7 +22,8 @@ window#waybar {
 #custom-dnf,
 #custom-pacman,
 #custom-vpn,
-#custom-media
+#custom-media,
+#idle_inhibitor
 {
   color: #ECEFF4;
   padding: 0px 10px;
@@ -42,7 +43,8 @@ window#waybar {
 #backlight,
 #custom-vpn,
 #custom-dnf,
-#custom-pacman
+#custom-pacman,
+#idle_inhibitor
 {
   background-color: #3B4252;
 }
