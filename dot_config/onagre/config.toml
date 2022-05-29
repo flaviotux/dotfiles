@@ -1,6 +1,0 @@
-# Integrate `pass` password manager.
-# Note that we need to run command in a subshell to escape double quotes and have env variables accessible.
-[modes.pass]
-source = "sh -c \"cd $HOME/.password-store && fd -t f . | sed s/\\.gpg//\""
-# Execute this command on `enter` `%` will be replaced with the selected entry
-target = "sh -c \"pass -c %\""

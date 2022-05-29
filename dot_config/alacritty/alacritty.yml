@@ -10,10 +10,26 @@ window:
     y: 7
 
   gtk_theme_variant: dark
+  opacity: 0.95
 
 font:
   normal:
     family: MesloLGS Nerd Font
+
+colors:
+  primary:
+    background: '#21262d'
+    foreground: '#c9d1d9'
+    dim_foreground: '#f0f6fc'
+  normal:
+    black: '#010409'
+    red: '#f85149'
+    green: '#2ea043'
+    yellow: '#bb8009'
+    blue: '#388bfd'
+    magenta: '#db61a2'
+    cyan: '#EA6045'
+    white: '#ffffff'
 
 shell:
   program: /usr/bin/zsh

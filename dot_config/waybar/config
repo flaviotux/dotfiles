@@ -4,30 +4,27 @@
     "layer": "top",
     "name": "internal",
     "height": 25,
-    "margin-left": 7,
-    "margin-right": 7,
-    "margin-top": 7,
-    "margin-bottom": 0,
+    "padding-left": 7,
+    "padding-right": 7,
 
     "modules-left": [
         "sway/workspaces",
-        "custom/right",
-        "sway/window",
-        "custom/right2",
         "custom/media"
+    ],
+
+    "modules-center": [
+      "sway/window"
     ],
 
     "modules-right": [
         "pulseaudio",
         "custom/left2",
-        "memory",
-        "custom/left2",
         "cpu",
         "custom/left3",
-        "custom/pacman",
         "idle_inhibitor",
         "custom/vpn",
         "network",
+        "custom/pacman",
         "battery",
         "battery#bat2",
         "custom/left",
@@ -44,7 +41,7 @@
             "1": "",
             "4": "",
             "urgent": "",
-            "focused": "",
+            "focused": "",
             "default": ""
         }
     },
@@ -54,7 +51,7 @@
     },
 
     "idle_inhibitor": {
-        "format": "{icon} inhibitor",
+        "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
@@ -118,11 +115,12 @@
     },
 
     "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": " ",
+        "format-ethernet": "",
+        "format-linked": "{ifname} ",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
 
     "pulseaudio": {

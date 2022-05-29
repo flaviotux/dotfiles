@@ -1,12 +1,12 @@
 .onagre {
-  background: #22272e;
-  color: #8b9eb0;
+  background: #161b22;
+  color: #8b949e;
   // --icon-theme: "Adwaita";
   --font-family: "MesloLGS Nerd Font";
   --icon-size: 24;
   border-radius: 0;
   border-width: 2;
-  border-color: #34404c;
+  border-color: #f0883e;
   padding: 2;
 
   .container {
@@ -14,7 +14,9 @@
       --height: fill-portion 6;
 
       .row {
-        padding: 5px;
+        padding: 8px;
+        border-radius: 4;
+        --width: 398;
 
         .icon {
           padding-top: 4px;
@@ -35,11 +37,9 @@
       }
 
       .row-selected {
-        --width: 398;
-        background: #2b313a;
-        color: #d8dee9;
-        border-radius: 4;
         padding: 8px;
+        background: #21262d;
+        color: #f0f6fc;
 
         .icon {
           padding-top: 4px;
@@ -52,7 +52,7 @@
 
         .title {
           font-size: 18px;
-          color: #3aa675;
+          color: #f0883e;
         }
 
         .description {
@@ -62,26 +62,26 @@
     }
 
     .search {
-      background: #22272e;
+      background: #21262d;
       color: #d8dee9;
-      border-width: 2;
-      border-color: #3e4c5a;
+      // border-width: 2;
+      // border-color: #30363d;
       --height: fill-portion 1;
       padding: 4px;
 
       .input {
-        --placeholder-color: #8b9eb0;
+        --placeholder-color: #6e7681;
         font-size: 18px;
       }
     }
 
     .scrollable {
       width: 2px;
-      background: #34404c;
+      background: #30363d;
 
       .scroller {
         width: 4px;
-        color: #3aa675;
+        color: #f0883e;
       }
     }
   }

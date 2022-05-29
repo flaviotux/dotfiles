@@ -24,7 +24,7 @@ set $menu onagre
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output "*" bg ~/.backgrounds/firewatch-sunset.jpg fill
+output "*" bg ~/.backgrounds/github-octocat.jpg fill
 
 #
 # Example configuration:
@@ -48,16 +48,16 @@ output {
 }
 
 #colors:                border  backgr. text     ind.
-client.focused          #88c0d0 #88c0d0 #2E3440 #88c0d0
-client.focused_inactive #434c5e #2e3440 #ECEFF4 #4c566a
-client.unfocused        #434c5e #2e3440 #ECEFF4 #4c566a
-client.urgent           #bf616a #bf616a #ECEFF4 #bf616a
+client.focused          #f0883e #f0883e #0d1117 #f0883e
+client.focused_inactive #f0883e #21262d #c9d1d9 #4c566a
+client.unfocused        #f0883e #21262d #c9d1d9 #4c566a
+client.urgent           #bf616a #bf616a #c9d1d9 #bf616a
 
 for_window {
   [app_id="Alacritty"] move container to workspace number 2
   [app_id="google-chrome"] move container to workspace number 3
   [app_id="chromium"] move container to workspace number 3
-  [app_id="firefox"] move container to workspace number 3
+  [class="firefox"] move container to workspace number 3
   [app_id="firefox-developer-edition"] move container to workspace number 3
   [class="Code"] move container to workspace number 2
   [class="Slack"] move container to workspace number 1
@@ -100,6 +100,11 @@ input {
   * xkb_numlock enable
 
   6058:20564:ThinkPad_Extra_Buttons {
+    xkb_layout br
+    xkb_variant thinkpad
+  }
+
+  1:1:AT_Translated_Set_2_keyboard {
     xkb_layout br
     xkb_variant thinkpad
   }

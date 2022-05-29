@@ -5,7 +5,8 @@
 }
 
 window#waybar {
-  background-color: #4c566a;
+  background-color: #30363d;
+  border-bottom: 1px solid #161b22;
 }
 
 #clock,
@@ -25,15 +26,9 @@ window#waybar {
 #custom-media,
 #idle_inhibitor
 {
-  color: #ECEFF4;
+  color: #c9d1d9;
   padding: 0px 10px;
   margin: 0;
-}
-
-#clock,
-#tray
-{
-  background-color: #434C5E;
 }
 
 #language,
@@ -46,12 +41,11 @@ window#waybar {
 #custom-pacman,
 #idle_inhibitor
 {
-  background-color: #3B4252;
+  background-color: #21262d;
 }
 
 #window {
-  background-color: #3B4252;
-  color: #ECEFF4;
+  color: #c9d1d9;
 }
 
 #window label {
@@ -63,18 +57,21 @@ window#waybar {
 }
 
 #workspaces {
-  background-color: #88C0D0;
+  background-color: #30363d;
+  margin: 2px 7px;
 }
 
 #workspaces button {
-  padding: 0px;
-  margin: 0 5px;
-  color: rgba(76, 86, 106, 0.3);
+  padding: 0 5px;
+  margin: 0;
+  color: #8b949e;
   background-color: transparent;
+  border-bottom-width: 2px;
+  border-bottom-color: #30363d;
 }
 
 #workspaces button:hover {
-  color: #2E3440;
+  color: #c9d1d9;
   text-shadow: none;
   background: transparent;
   box-shadow: none;
@@ -82,7 +79,8 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  color: #2E3440;
+  color: #c9d1d9;
+  border-bottom-color: #f0883e;
 }
 
 #workspaces button.urgent {
@@ -102,27 +100,27 @@ window#waybar {
 }
 
 #custom-right {
-  background-color: #3B4252; 
+  background-color: #21262d; 
   color: #88C0D0;
 }
 
 #custom-right2 {
-  color: #3B4252; 
+  color: #21262d; 
 }
 
 #custom-left {
-  color: #434C5E;
-  background-color: #3B4252;
+  color: #30363d;
+  background-color: #21262d;
 }
 
 #custom-left2, #custom-left4 {
-  color: #ECEFF4;
+  color: #c9d1d9;
 }
 
 #custom-left3 {
-  color: #3B4252;
+  color: #21262d;
 }
 
 #custom-left4 {
-  background-color: #3B4252;
+  background-color: #21262d;
 }
