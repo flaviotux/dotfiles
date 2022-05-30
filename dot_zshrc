@@ -120,6 +120,10 @@ alias lS='ls -1'                                                       # one col
 alias lt='ls --tree --level=2'                                         # tree
 alias vim='lvim'
 
+# Init z
+export Z_DIR=/usr/share/z
+[ -s "$Z_DIR/z.sh" ] && \. "$Z_DIR/z.sh"
+
 # Init starship prompt
 eval "$(starship init zsh)"
 

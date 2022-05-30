@@ -6,7 +6,7 @@
 
 window#waybar {
   background-color: #30363d;
-  border-bottom: 1px solid #161b22;
+  border-bottom: solid 1px #484f58;
 }
 
 #clock,
@@ -42,6 +42,7 @@ window#waybar {
 #idle_inhibitor
 {
   background-color: #21262d;
+  margin-bottom: 1px;
 }
 
 #window {
@@ -57,8 +58,7 @@ window#waybar {
 }
 
 #workspaces {
-  background-color: #30363d;
-  margin: 2px 7px;
+  margin: 0px 10px;
 }
 
 #workspaces button {
@@ -67,20 +67,18 @@ window#waybar {
   color: #8b949e;
   background-color: transparent;
   border-bottom-width: 2px;
-  border-bottom-color: #30363d;
+  border-bottom-color: transparent;
 }
 
 #workspaces button:hover {
   color: #c9d1d9;
-  text-shadow: none;
-  background: transparent;
-  box-shadow: none;
   border-color: transparent;
+  background: transparent;
 }
 
 #workspaces button.focused {
   color: #c9d1d9;
-  border-bottom-color: #f0883e;
+  border-bottom-color: #F78166;
 }
 
 #workspaces button.urgent {
@@ -111,6 +109,7 @@ window#waybar {
 #custom-left {
   color: #30363d;
   background-color: #21262d;
+  margin-bottom: 1px;
 }
 
 #custom-left2, #custom-left4 {
@@ -123,4 +122,22 @@ window#waybar {
 
 #custom-left4 {
   background-color: #21262d;
+}
+
+#battery.charging {
+  color: #34d058;
+}
+
+@keyframes blink {
+    to {
+        color: #21262d;
+    }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

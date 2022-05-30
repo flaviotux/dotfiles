@@ -33,7 +33,7 @@ output "*" bg ~/.backgrounds/github-octocat.jpg fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 gaps inner 7
-default_border pixel 2
+default_border pixel 1
 
 set $external HDMI-A-2
 set $laptop eDP-1
@@ -43,14 +43,13 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 output {
   $external mode 2560x1080@75Hz pos 1476,0
-
   $laptop mode 1920x1080@60Hz pos 0,0
 }
 
 #colors:                border  backgr. text     ind.
-client.focused          #f0883e #f0883e #0d1117 #f0883e
-client.focused_inactive #f0883e #21262d #c9d1d9 #4c566a
-client.unfocused        #f0883e #21262d #c9d1d9 #4c566a
+client.focused          #484f58 #484f58 #c9d1d9 #484f58
+client.focused_inactive #484f58 #21262d #484f58 #484f58
+client.unfocused        #484f58 #21262d #484f58 #484f58
 client.urgent           #bf616a #bf616a #c9d1d9 #bf616a
 
 for_window {
@@ -78,9 +77,9 @@ for_window {
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-  timeout 900 'swaylock -f -c 2E3440' \
+  timeout 900 'swaylock -f -c 21262d' \
   timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f -c 2E3440'
+  before-sleep 'swaylock -f -c 21262d'
 
 ### Input configuration
 #
@@ -145,7 +144,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Reload the configuration file
-bindsym $mod+Escape exec swaylock -f -c 2E3440
+bindsym $mod+Escape exec swaylock -f -c 21262d
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'

@@ -115,7 +115,7 @@
     },
 
     "network": {
-        "format-wifi": " ",
+        "format-wifi": "",
         "format-ethernet": "",
         "format-linked": "{ifname} ",
         "format-disconnected": "",
@@ -154,7 +154,7 @@
     },
 
     "custom/dnf": {
-        "format": "  {}",
+        "format": " {}",
         "interval": 36000,
         "exec": "dnf check-update | grep 'updates' | wc -l",
         "exec-if": "exit 0",
@@ -162,7 +162,7 @@
     },
 
     "custom/pacman": {
-       "format": "  {}",
+       "format": " {}",
        "interval": 3600,
        "exec": "yay -Qu | wc -l",
        "exec-if": "exit 0",
