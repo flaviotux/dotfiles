@@ -24,7 +24,7 @@ set $menu onagre
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output "*" bg ~/.backgrounds/github-octocat.jpg fill
+output * bg ~/.backgrounds/evening-sunset-mountains-firewatch.jpg fill
 
 #
 # Example configuration:
@@ -55,15 +55,15 @@ client.unfocused         #484f58 #30363d #6e7681 #484f58
 client.urgent            #bf616a #bf616a #c9d1d9 #bf616a
 
 for_window {
-  [app_id="Alacritty"] move container to workspace number 2
-  [app_id="google-chrome"] move container to workspace number 3
-  [app_id="chromium"] move container to workspace number 3
-  [class="firefox"] move container to workspace number 3
-  [app_id="firefox-developer-edition"] move container to workspace number 3
-  [class="Code"] move container to workspace number 2
-  [class="Slack"] move container to workspace number 1
-  [class=¨"discord"] move container to workspace number 1
-  [instance="spotify"] move container to workspace number 4
+  [app_id="Alacritty"] move container to workspace $ws2
+  [app_id="google-chrome"] move container to workspace $ws3
+  [app_id="chromium"] move container to workspace $ws3
+  [class="firefox"] move container to workspace $ws3
+  [class="firefox-developer-edition"] move container to workspace $ws3
+  [class="Code"] move container to workspace $ws2
+  [class="Slack"] move container to workspace $ws1
+  [class="discord"] move container to workspace $ws1
+  [instance="spotify"] move container to workspace $ws4
 }
 
 ### Idle configuration
@@ -121,6 +121,20 @@ input {
     middle_emulation enabled
   }
 }
+
+#
+# Workspaces name
+#
+set $ws1 1:work
+set $ws2 2:code
+set $ws3 3:web
+set $ws4 4:music
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
 
 ### Key bindings
 #
@@ -185,27 +199,27 @@ bindsym $mod+Shift+Right move right
 bindsym Ctrl+Alt+Left workspace prev
 bindsym Ctrl+Alt+Right workspace next
 
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 # Note: workspaces can have any name you want, not just numbers.
 # We just use 1-10 as the default.
 #

@@ -51,7 +51,7 @@ window#waybar {
 }
 
 #window label {
-  font-size: 0;
+  font-size: 14px;
 }
 
 #window.empty {

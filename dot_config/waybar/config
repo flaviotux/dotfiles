@@ -9,11 +9,11 @@
 
     "modules-left": [
         "sway/workspaces",
-        "custom/media"
+        "sway/window"
     ],
 
     "modules-center": [
-      "sway/window"
+      "custom/spotify"
     ],
 
     "modules-right": [
@@ -35,12 +35,12 @@
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
-        "format": "{icon}", 
+        "format": "{icon} {name}", 
         "format-icons": {
-            "3": "",
-            "2": "﬏",
-            "1": "",
-            "4": "",
+            "3:web": "",
+            "2:code": "﬏",
+            "1:work": "",
+            "4:music": "",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -153,17 +153,14 @@
         "on-click": "pavucontrol"
     },
 
-    "custom/media": {
-        "format": "{icon} {}",
+    "custom/spotify": {
+        "format": " {}",
         "return-type": "json",
         "max-length": 40,
         "on-click": "playerctl play-pause",
-        "format-icons": {
-            "spotify": "",
-            "default": ""
-        },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "/home/flaviotux/.config/waybar/mediaplayer.py 2> /dev/null",
+        "exec-if": "pgrep spotify"
     },
 
     "custom/dnf": {
@@ -178,8 +175,6 @@
        "format": " {}",
        "interval": 3600,
        "exec": "yay -Qyu | wc -l",
-       "exec-if": "exit 0",
-       "on-click": "alacritty -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
        "signal": 8
     },
 
