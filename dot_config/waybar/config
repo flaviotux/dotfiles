@@ -17,20 +17,21 @@
     ],
 
     "modules-right": [
-        "pulseaudio",
-        "custom/left2",
         "cpu",
+        "memory",
         "custom/left3",
         "idle_inhibitor",
         "custom/vpn",
         "network",
         "custom/pacman",
+        "pulseaudio",
         "battery",
         "battery#bat2",
         "custom/left",
         "clock",
         "tray"
     ],
+
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -46,6 +47,16 @@
         }
     },
 
+    "bluetooth": {
+	    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	    "format": " {status}",
+	    "format-disabled": "", // an empty format will hide the module
+	    "format-connected": " {num_connections} connected",
+	    "tooltip-format": "{controller_alias}\t{controller_address}",
+	    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -57,7 +68,6 @@
             "deactivated": ""
         }
     },
-
 
     "tray": {
         "spacing": 10
@@ -115,12 +125,15 @@
     },
 
     "network": {
-        "format-wifi": "",
-        "format-ethernet": "",
+        "format": "{icon}",
         "format-linked": "{ifname} ",
-        "format-disconnected": "",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": {
+          "wifi": "",
+          "ethernet": "",
+          "disconnected": ""
+        }
     },
 
     "pulseaudio": {
@@ -164,7 +177,7 @@
     "custom/pacman": {
        "format": " {}",
        "interval": 3600,
-       "exec": "yay -Qu | wc -l",
+       "exec": "yay -Qyu | wc -l",
        "exec-if": "exit 0",
        "on-click": "alacritty -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
        "signal": 8

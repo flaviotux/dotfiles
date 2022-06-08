@@ -39,7 +39,8 @@ window#waybar {
 #custom-vpn,
 #custom-dnf,
 #custom-pacman,
-#idle_inhibitor
+#idle_inhibitor,
+#pulseaudio
 {
   background-color: #21262d;
   margin-bottom: 1px;
