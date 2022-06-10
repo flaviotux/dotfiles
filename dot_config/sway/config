@@ -314,6 +314,9 @@ bindsym Alt+Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and 
 # Executer
 #
 
+# Logi Solaar
+exec solaar
+
 # Notification center
 exec mako
 
