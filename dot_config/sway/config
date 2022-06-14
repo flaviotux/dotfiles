@@ -24,7 +24,8 @@ set $menu onagre
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.backgrounds/evening-sunset-mountains-firewatch.jpg fill
+set $external HDMI-A-2
+set $laptop eDP-1
 
 #
 # Example configuration:
@@ -36,15 +37,12 @@ gaps inner 7
 default_border pixel 1
 focus_on_window_activation focus
 
-set $external HDMI-A-2
-set $laptop eDP-1
-
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output {
-  $external mode 2560x1080@75Hz pos 1476,0
-  $laptop mode 1920x1080@60Hz pos 0,0
+  $external mode 2560x1080@75Hz pos 1476,0 bg ~/.backgrounds/space-external.jpg fill
+  $laptop mode 1920x1080@60Hz pos 0,0 bg ~/.backgrounds/space-laptop.jpg fill
 }
 
 #colors:                 border  backgr. text     ind.

@@ -37,10 +37,10 @@
         "all-outputs": false,
         "format": "{icon} {name}", 
         "format-icons": {
-            "3:web": "",
-            "2:code": "﬏",
-            "1:work": "",
-            "4:music": "",
+            "3:web": "",
+            "2:code": "",
+            "1:work": "",
+            "4:music": "",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -106,7 +106,7 @@
     },
 
     "battery": {
-        "interval": 30,
+        "interval": 20,
         "format": "{icon} {capacity}%",
         "format-icons": {
             "plugged": "",
@@ -132,23 +132,23 @@
         "format-icons": {
           "wifi": "",
           "ethernet": "",
-          "disconnected": ""
+          "disconnected": ""
         }
     },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon}  {format_source}",
-        "format-bluetooth-muted": "0% {icon}  {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": "{icon} {volume}%  {format_source}",
+        "format-muted": "婢 {volume}% {format_source}",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", "", "墳", ""]
         },
         "on-click": "pavucontrol"
     },
