@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background-color: #30363d;
+  background-color: #21262d;
   border-bottom: solid 1px #484f58;
 }
 
@@ -27,7 +27,7 @@ window#waybar {
 #custom-spotify,
 #idle_inhibitor
 {
-  color: #c9d1d9;
+  color: #f0f6fc;
   padding: 0px 10px;
   margin: 0;
 }
@@ -43,12 +43,12 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio
 {
-  background-color: #21262d;
+  background-color: rgba(110,118,129,0.1);
   margin-bottom: 1px;
 }
 
 #window {
-  color: #c9d1d9;
+  color: #f0f6fc;
 }
 
 #window label {
@@ -73,13 +73,13 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  color: #c9d1d9;
+  color: #f0f6fc;
   border-color: transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  color: #c9d1d9;
+  color: #f0f6fc;
   border-bottom-color: #F78166;
 }
 
@@ -100,30 +100,30 @@ window#waybar {
 }
 
 #custom-right {
-  background-color: #21262d; 
+  background-color: rgba(110,118,129,0.1); 
   color: #88C0D0;
 }
 
 #custom-right2 {
-  color: #21262d; 
+  color: rgba(110,118,129,0.1); 
 }
 
 #custom-left {
-  color: #30363d;
-  background-color: #21262d;
+  color: #21262d;
+  background-color: rgba(110,118,129,0.1);
   margin-bottom: 1px;
 }
 
 #custom-left2, #custom-left4 {
-  color: #c9d1d9;
+  color: #f0f6fc;
 }
 
 #custom-left3 {
-  color: #21262d;
+  color: rgba(110,118,129,0.1);
 }
 
 #custom-left4 {
-  background-color: #21262d;
+  background-color: rgba(110,118,129,0.1);
 }
 
 #battery.charging {
@@ -132,7 +132,7 @@ window#waybar {
 
 @keyframes blink {
     to {
-        color: #21262d;
+        color: rgba(110,118,129,0.1);
     }
 }
 
