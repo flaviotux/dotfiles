@@ -43,7 +43,7 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio
 {
-  background-color: rgba(110,118,129,0.1);
+  background-color: #30363d;
   margin-bottom: 1px;
 }
 
@@ -100,17 +100,17 @@ window#waybar {
 }
 
 #custom-right {
-  background-color: rgba(110,118,129,0.1); 
+  background-color: #30363d; 
   color: #88C0D0;
 }
 
 #custom-right2 {
-  color: rgba(110,118,129,0.1); 
+  color: #30363d; 
 }
 
 #custom-left {
   color: #21262d;
-  background-color: rgba(110,118,129,0.1);
+  background-color: #30363d;
   margin-bottom: 1px;
 }
 
@@ -119,11 +119,11 @@ window#waybar {
 }
 
 #custom-left3 {
-  color: rgba(110,118,129,0.1);
+  color: #30363d;
 }
 
 #custom-left4 {
-  background-color: rgba(110,118,129,0.1);
+  background-color: #30363d;
 }
 
 #battery.charging {
@@ -132,7 +132,7 @@ window#waybar {
 
 @keyframes blink {
     to {
-        color: rgba(110,118,129,0.1);
+        color: #f85149;
     }
 }
 
