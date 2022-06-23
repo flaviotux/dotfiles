@@ -18,14 +18,16 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu dmenu_path | wofi --show=drun -i | xargs swaymsg exec --
-set $menu onagre
+set $menu wofi --show drun -Gi
+#set $menu onagre
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $external HDMI-A-2
 set $laptop eDP-1
+
+output * bg ~/.backgrounds/space-vector-wallpapers.png fill
 
 #
 # Example configuration:
@@ -41,8 +43,8 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output {
-  $external mode 2560x1080@75Hz pos 1476,0 bg ~/.backgrounds/space-external.jpg fill
-  $laptop mode 1920x1080@60Hz pos 0,0 bg ~/.backgrounds/space-laptop.jpg fill
+  $external mode 2560x1080@75Hz pos 1476,0
+  $laptop mode 1920x1080@60Hz pos 0,0
 }
 
 #colors:                 border  backgr. text     ind.
