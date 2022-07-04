@@ -329,6 +329,9 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Paloalto GlobalProtect socket
 exec /opt/paloaltonetworks/globalprotect/PanGPA start
 
+# Gnome keyring daemon
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 #
 # Status Bar:
 #
