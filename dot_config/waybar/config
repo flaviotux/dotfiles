@@ -179,9 +179,12 @@
     },
 
     "custom/vpn": {
-        "format": "",
-        "exec": "echo '{\"class\": \"connected\"}'",
-        "exec-if": "test -d /proc/sys/net/ipv4/conf/tun0",
+        "format": "{icon}",
+        "format-icons": {
+          "connected": "",
+          "disconnected": ""
+        },
+        "exec": "/home/flaviotux/.config/waybar/vpn-status.sh 2> /dev/null",
         "return-type": "json",
         "interval": 5
     },
