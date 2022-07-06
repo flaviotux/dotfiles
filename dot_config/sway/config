@@ -56,7 +56,7 @@ client.urgent            #bf616a #bf616a #c9d1d9 #bf616a
 
 for_window {
   [app_id="Alacritty"] move container to workspace $ws2
-  [app_id="google-chrome"] move container to workspace $ws3
+  [class="Google-chrome"] move container to workspace $ws3
   [app_id="chromium"] move container to workspace $ws3
   [app_id="firefox"] move container to workspace $ws3
   [app_id="firefox-developer-edition"] move container to workspace $ws3
