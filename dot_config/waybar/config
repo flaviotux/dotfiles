@@ -23,7 +23,7 @@
         "idle_inhibitor",
         "custom/vpn",
         "network",
-        "custom/pacman",
+        "custom/dnf",
         "pulseaudio",
         "battery",
         "battery#bat2",
@@ -167,7 +167,6 @@
         "format": " {}",
         "interval": 36000,
         "exec": "dnf check-update | grep 'updates' | wc -l",
-        "exec-if": "exit 0",
         "signal": 8
     },
 
