@@ -324,13 +324,13 @@ exec mako
 exec flatpak run --branch=stable --arch=x86_64 --command=slack --file-forwarding com.slack.Slack
 
 # Authentication agent
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/lib/polkit-gnome-authentication-agent-1
 
 # Paloalto GlobalProtect socket
 exec /opt/paloaltonetworks/globalprotect/PanGPA start
 
 # Gnome keyring daemon
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway SWAYSOCK
 
 #
 # Status Bar:

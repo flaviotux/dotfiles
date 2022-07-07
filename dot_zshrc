@@ -119,7 +119,7 @@ alias lx='ls -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + ex
 # specialty views
 alias lS='ls -1'                                                       # one column, just names
 alias lt='ls --tree --level=2'                                         # tree
-alias vim='lvim'
+# alias vim='lvim'
 
 # Init z
 export Z_DIR="/usr/libexec"
