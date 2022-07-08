@@ -2,7 +2,7 @@
 
 [Arch Linux](https://archlinux.org/) | [Sway](https://github.com/swaywm/sway) | [Waybar](https://github.com/Alexays/Waybar) | [Onagre](https://github.com/oknozor/onagre)
 
-![image](https://user-images.githubusercontent.com/49658066/173834002-142353aa-1c0d-4eab-8b23-0c5399cff788.png)
+![image](https://user-images.githubusercontent.com/49658066/178058632-987877c3-62ed-4fac-a3f5-6a6ebd00f679.png)
 
 ### Tools
 [LunarVim](https://github.com/LunarVim/LunarVim) | [VSCode](https://github.com/microsoft/vscode)
