@@ -1,5 +1,7 @@
-if [ -d /proc/sys/net/ipv4/conf/tun0 ]; then
-  echo '{"class": "connected", "alt": "connected"}'
+if [ $(nmcli | grep "gpd0: connected" | wc -c) -ne 0 ]; then
+  status=connected
 else
-  echo '{"class": "disconnected", "alt": "disconnected"}'
-fi
+  status=disconnected
+fi;
+
+echo "{\"class\": \"$status\", \"alt\": \"$status\"}"

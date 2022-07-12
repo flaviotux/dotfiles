@@ -320,17 +320,22 @@ exec solaar
 # Notification center
 exec mako
 
-# Slack startuo system
+# Discord startup system
+exec flatpak run --branch=stable --arch=x86_64 --command=discord com.discordapp.Discord
+
+# Slack startup system
 exec flatpak run --branch=stable --arch=x86_64 --command=slack --file-forwarding com.slack.Slack
 
 # Authentication agent
-exec /usr/lib/polkit-gnome-authentication-agent-1
+exec /usr/libexec/polkit-gnome-authentication-agent-1
 
 # Paloalto GlobalProtect socket
 exec /opt/paloaltonetworks/globalprotect/PanGPA start
 
 # Gnome keyring daemon
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway SWAYSOCK
+
+set $gnome-schema org.gnome.desktop.interface
 
 #
 # Status Bar:
