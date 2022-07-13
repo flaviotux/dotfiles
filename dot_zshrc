@@ -76,6 +76,7 @@ plugins=(
   node
   npm
   yarn
+  docker
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
