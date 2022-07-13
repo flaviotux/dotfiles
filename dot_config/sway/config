@@ -335,7 +335,8 @@ exec /opt/paloaltonetworks/globalprotect/PanGPA start
 # Gnome keyring daemon
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway SWAYSOCK
 
-set $gnome-schema org.gnome.desktop.interface
+# Geoclue startup system
+exec /usr/libexec/geoclue-2.0/demos/agent
 
 #
 # Status Bar:
