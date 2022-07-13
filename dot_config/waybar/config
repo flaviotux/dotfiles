@@ -126,11 +126,12 @@
 
     "network": {
         "format": "{icon}",
-        "format-linked": "{ifname} ",
+        "format-linked": "{ifname} ",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "format-icons": {
           "wifi": "",
+          "linked": "",
           "ethernet": "",
           "disconnected": ""
         }
