@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -27,7 +27,7 @@ set $menu onagre
 set $external HDMI-A-2
 set $laptop eDP-1
 
-output * bg ~/.backgrounds/star-wars-dark-side.jpg fill
+output * bg ~/.backgrounds/space-vector-wallpapers.png fill
 
 #
 # Example configuration:
@@ -321,10 +321,10 @@ exec solaar
 exec mako
 
 # Discord startup system
-exec flatpak run --branch=stable --arch=x86_64 --command=discord com.discordapp.Discord
+exec discord
 
 # Slack startup system
-exec flatpak run --branch=stable --arch=x86_64 --command=slack --file-forwarding com.slack.Slack
+exec slack
 
 # Authentication agent
 exec /usr/libexec/polkit-gnome-authentication-agent-1
@@ -334,6 +334,8 @@ exec /opt/paloaltonetworks/globalprotect/PanGPA start
 
 # Gnome keyring daemon
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway SWAYSOCK
+
+exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
 
 # Geoclue startup system
 exec /usr/libexec/geoclue-2.0/demos/agent
