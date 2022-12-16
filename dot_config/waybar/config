@@ -1,5 +1,3 @@
-
-
 {
     "layer": "top",
     "name": "internal",
@@ -23,7 +21,7 @@
         "idle_inhibitor",
         "custom/vpn",
         "network",
-        "custom/dnf",
+        "custom/pacman",
         "pulseaudio",
         "battery",
         "battery#bat2",
