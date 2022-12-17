@@ -10,8 +10,8 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
-lvim.colorscheme = "tokyonight-night"
+lvim.format_on_save.enabled = true
+lvim.colorscheme = "github_dark"
 lvim.transparent_window = true
 lvim.builtin.lualine.style = "default"
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -171,6 +171,9 @@ lvim.builtin.treesitter.highlight.enable = true
 --       cmd = "TroubleToggle",
 --     },
 -- }
+lvim.plugins = {
+  { 'projekt0n/github-nvim-theme' }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
