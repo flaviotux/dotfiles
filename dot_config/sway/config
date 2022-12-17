@@ -52,7 +52,7 @@ client.focused           #484f58 #484f58 #c9d1d9 #484f58 #484f58
 client.focused_inactive  #21262d #30363d #6e7681 #21262d
 client.focused_tab_title #484f58 #161b22 #c9d1d9
 client.unfocused         #484f58 #30363d #6e7681 #484f58
-client.urgent            #bf616a #bf616a #c9d1d9 #bf616a
+client.urgent            #58a6ff #58a6ff #c9d1d9 #58a6ff
 
 for_window {
   [app_id="Alacritty"] move container to workspace $ws2
@@ -338,7 +338,7 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CU
 exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
 
 # Geoclue startup system
-exec /usr/libexec/geoclue-2.0/demos/agent
+exec /usr/lib/geoclue-2.0/demos/agent
 
 #
 # Status Bar:
