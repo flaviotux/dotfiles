@@ -64,7 +64,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 6px 10px;
+  padding: 5px 0px;
   margin: 0 5px;
   color: #8b949e;
   font-weight: 500;
@@ -79,14 +79,22 @@ window#waybar {
 
 #workspaces button.focused {
   color: #f0f6fc;
-  border-top: 1px solid #f9826c;
-  background: #0d1117;
-  border-bottom: 1px solid #0d1117;
+  border-bottom: 1px solid #f9826c;
 }
 
-#workspaces button.urgent {
+#workspaces button.urgent label {
   color: #58a6ff;
   background-color: rgba(56,139,253,0.15);
+}
+
+#workspaces button label {
+  border-radius: 6px;
+  padding: 5px 10px;
+  background-color: transparent;
+}
+
+#workspaces button:hover:not(.urgent) label{
+  background-color: rgba(177,186,196,0.12);
 }
 
 #custom-right,
