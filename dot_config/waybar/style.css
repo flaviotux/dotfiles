@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background-color: #1f2428;
+  background-color: #0d1117;
   border-bottom: solid 1px #30363d;
 }
 
@@ -27,7 +27,7 @@ window#waybar {
 #custom-spotify,
 #idle_inhibitor
 {
-  color: #f0f6fc;
+  color: #c9d1d9;
   padding: 0px 10px;
   margin: 0;
 }
@@ -43,12 +43,12 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio
 {
-  background-color: #24292e;
+  background-color: #010409;
   margin-bottom: 1px;
 }
 
 #window {
-  color: #f0f6fc;
+  color: #c9d1d9;
 }
 
 #window label {
@@ -72,14 +72,14 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  color: #f0f6fc;
+  color: #c9d1d9;
   border-color: transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  color: #f0f6fc;
-  border-bottom: 2px solid #f9826c;
+  color: #c9d1d9;
+  border-bottom: 1px solid #f78166;
 }
 
 #workspaces button.urgent label {
@@ -94,7 +94,7 @@ window#waybar {
 }
 
 #workspaces button:hover:not(.urgent) label{
-  background-color: rgba(177,186,196,0.12);
+  background-color: rgba(110,118,129,0.4);
 }
 
 #custom-right,
@@ -110,30 +110,30 @@ window#waybar {
 }
 
 #custom-right {
-  background-color: #24292e; 
-  color: #88C0D0;
+  background-color: #010409; 
+  color: #c9d1d9;
 }
 
 #custom-right2 {
-  color: #24292e; 
+  color: #010409; 
 }
 
 #custom-left {
-  color: #1f2428;
-  background-color: #24292e;
+  color: #0d1117;
+  background-color: #010409;
   margin-bottom: 1px;
 }
 
 #custom-left2, #custom-left4 {
-  color: #f0f6fc;
+  color: #c9d1d9;
 }
 
 #custom-left3 {
-  color: #24292e;
+  color: #010409;
 }
 
 #custom-left4 {
-  background-color: #24292e;
+  background-color: #010409;
 }
 
 #battery.charging {
@@ -141,9 +141,9 @@ window#waybar {
 }
 
 @keyframes blink {
-    to {
-        color: #f85149;
-    }
+  to {
+    color: #f85149;
+  }
 }
 
 #battery.critical:not(.charging) {

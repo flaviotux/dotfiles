@@ -1,11 +1,11 @@
 .onagre {
-  background: #24292d;
-  color: #6e7681;
+  background: #0d1117;
+  color: #8b949e;
   --font-family: "MesloLGS Nerd Font";
   --icon-size: 24;
   border-radius: 0;
   border-width: 1;
-  border-color: #484f58;
+  border-color: #30363d;
   padding: 2;
 
   .container {
@@ -38,7 +38,7 @@
       .row-selected {
         --width: 398;
         padding: 8px;
-        background: #30363d;
+        background: #161b22;
         color: #f0f6fc;
 
         .icon {
@@ -62,24 +62,24 @@
     }
 
     .search {
-      background: #1f2428;
+      background: #010409;
       color: #f0f6fc;
       --height: fill-portion 1;
       padding: 4px;
 
       .input {
-        --placeholder-color: #6e7681;
+        --placeholder-color: #8b949e;
         font-size: 18px;
       }
     }
 
     .scrollable {
-      width: 2px;
-      background: #1f2428;
+      width: 0px;
+      background: #010409;
 
       .scroller {
         width: 4px;
-        color: #30363d;
+        color: #010409;
       }
     }
   }

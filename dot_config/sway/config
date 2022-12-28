@@ -48,10 +48,10 @@ output {
 }
 
 #colors:                 border  backgr. text     ind.
-client.focused           #484f58 #484f58 #c9d1d9 #484f58 #484f58
-client.focused_inactive  #21262d #30363d #6e7681 #21262d
-client.focused_tab_title #484f58 #161b22 #c9d1d9
-client.unfocused         #484f58 #30363d #6e7681 #484f58
+client.focused           #30363d #0d1117 #c9d1d9 #30363d #30363d
+client.focused_inactive  #21262d #010409 #6e7681 #21262d
+client.focused_tab_title #30363d #161b22 #c9d1d9
+client.unfocused         #161b22 #010409 #6e7681 #161b22
 client.urgent            #58a6ff #58a6ff #c9d1d9 #58a6ff
 
 for_window {
