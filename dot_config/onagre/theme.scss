@@ -1,6 +1,6 @@
 .onagre {
-  background: #21262d;
-  color: #8b949e;
+  background: #24292d;
+  color: #6e7681;
   --font-family: "MesloLGS Nerd Font";
   --icon-size: 24;
   border-radius: 0;
@@ -62,8 +62,8 @@
     }
 
     .search {
-      background: #161b22;
-      color: #d8dee9;
+      background: #1f2428;
+      color: #f0f6fc;
       --height: fill-portion 1;
       padding: 4px;
 
@@ -75,11 +75,11 @@
 
     .scrollable {
       width: 2px;
-      background: #161b22;
+      background: #1f2428;
 
       .scroller {
         width: 4px;
-        color: #424f58;
+        color: #30363d;
       }
     }
   }

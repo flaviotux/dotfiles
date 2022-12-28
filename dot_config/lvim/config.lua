@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "github_dark"
+lvim.colorscheme = "github_dark_default"
 lvim.transparent_window = true
 lvim.builtin.lualine.style = "default"
 -- to disable icons and use a minimalist setup, uncomment the following

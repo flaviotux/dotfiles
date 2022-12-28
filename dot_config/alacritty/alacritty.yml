@@ -11,14 +11,10 @@ window:
 
   decorations_theme_variant: dark
   dynamic_padding: true
-  opacity: 0.97
+  opacity: 0.99
   dynamic_title: true
 
 font:
   normal:
     family: MesloLGS Nerd Font
 
-shell:
-  program: /usr/bin/zsh
-  args:
-    - --login
