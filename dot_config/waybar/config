@@ -2,8 +2,8 @@
     "layer": "top",
     "name": "internal",
     "height": 25,
-    "padding-left": 7,
-    "padding-right": 7,
+    "margin-left": 7,
+    "margin-right": 7,
 
     "modules-left": [
         "sway/workspaces",
