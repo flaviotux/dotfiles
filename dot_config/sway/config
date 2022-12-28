@@ -79,9 +79,9 @@ for_window {
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-  timeout 900 'swaylock -f -c 21262d' \
+  timeout 900 'swaylock -f -c 0d1117' \
   timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f -c 21262d'
+  before-sleep 'swaylock -f -c 0d1117'
 
 ### Input configuration
 #
@@ -160,7 +160,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Reload the configuration file
-bindsym $mod+Escape exec swaylock -f -c 21262d
+bindsym $mod+Escape exec swaylock -f -c 0d1117
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
