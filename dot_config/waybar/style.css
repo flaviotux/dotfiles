@@ -32,6 +32,10 @@ window#waybar {
   margin: 0;
 }
 
+#tray {
+  padding: 0px 0px 0px 10px;
+}
+
 #language,
 #battery,
 #bat2,
@@ -65,10 +69,14 @@ window#waybar {
 
 #workspaces button {
   padding: 4px 0px 5px;
-  margin: 0 5px;
+  margin: 0px 5px 0px -2px;
   color: #8b949e;
   font-weight: 500;
   background-color: transparent;
+}
+
+#workspaces button:not(:first-child) {
+  margin: 0px 5px;
 }
 
 #workspaces button:hover {
@@ -79,7 +87,7 @@ window#waybar {
 
 #workspaces button.focused {
   color: #c9d1d9;
-  border-bottom: 1px solid #f78166;
+  border-bottom: 2px solid #f78166;
 }
 
 #workspaces button.urgent label {
@@ -93,7 +101,7 @@ window#waybar {
   background-color: transparent;
 }
 
-#workspaces button:hover:not(.urgent) label{
+#workspaces button:hover:not(.urgent) label {
   background-color: rgba(177,186,196,0.12);
 }
 

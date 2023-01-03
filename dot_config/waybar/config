@@ -19,7 +19,6 @@
         "memory",
         "custom/left3",
         "idle_inhibitor",
-        "custom/vpn",
         "network",
         "custom/pacman",
         "pulseaudio",
