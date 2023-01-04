@@ -148,6 +148,7 @@ bindsym $mod+q kill
 
 # Start your launcher
 bindsym $mod+d exec $menu
+bindgesture swipe:4:up exec $menu 
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -198,6 +199,10 @@ bindsym $mod+Shift+Right move right
 # Switch to workspace
 bindsym Ctrl+Alt+Left workspace prev
 bindsym Ctrl+Alt+Right workspace next
+
+# Allow switching between workspaces with left and right swipes
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
