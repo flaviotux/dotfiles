@@ -6,7 +6,7 @@
 @define-color view_fg_color @window_fg_color;
 @define-color accent_bg_color #1f6feb;
 @define-color accent_color @accent_bg_color;
-@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_bg_color #161b22;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color popover_bg_color #161b22;
 @define-color popover_fg_color @view_fg_color;
@@ -20,7 +20,6 @@
 /* Remove rounded corners */
 .titlebar,
 .titlebar .background,
-decoration,
 window,
 window.background
 {
@@ -31,6 +30,13 @@ window.background
 decoration, decoration:backdrop
 {
   box-shadow: none;
+  border: 1px solid #30363d;
+}
+
+menu menuitem {
+  border-radius: 6px;
+  padding: 6px 0px;
+  margin: 0p;
 }
 
 button.titlebutton { /* GTK3 */

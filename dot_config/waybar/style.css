@@ -47,7 +47,7 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio
 {
-  background-color: #010409;
+  background-color: #161b22;
   margin-bottom: 1px;
 }
 
@@ -118,17 +118,17 @@ window#waybar {
 }
 
 #custom-right {
-  background-color: #010409; 
+  background-color: #161b22; 
   color: #c9d1d9;
 }
 
 #custom-right2 {
-  color: #010409; 
+  color: #161b22; 
 }
 
 #custom-left {
   color: #0d1117;
-  background-color: #010409;
+  background-color: #161b22;
   margin-bottom: 1px;
 }
 
@@ -137,11 +137,11 @@ window#waybar {
 }
 
 #custom-left3 {
-  color: #010409;
+  color: #161b22;
 }
 
 #custom-left4 {
-  background-color: #010409;
+  background-color: #161b22;
 }
 
 #battery.charging {

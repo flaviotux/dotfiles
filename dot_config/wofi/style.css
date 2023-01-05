@@ -1,31 +1,36 @@
 window {
-  margin: 5px;
-  border: 2px solid #88C0D0;
-  background-color: #2E3440;
+  border: 1px solid #30363d;
+  background-color: #161b22;
 }
   
 #input {
   margin: 5px;
-  border: 2px solid #434C5E;
-  background-color: #434C5E;
-  border-radius: 0;
+  border: 1px solid #30363d;
+  border-radius: 6px 6px 0 0;
+  background-color: #0d1117;
+}
+
+#input:focus {
+  border-color: #30363d;
 }
   
 #inner-box {
-  margin: 5px 1px;
-  border: 2px solid #434C5E;
-  background-color: #434C5E;
+  background-color: #0d1117;
+}
+
+#entry {
+  border-bottom: 1px solid #30363d;
+  color: #8b949e;
+  padding: 0px 5px;
 }
   
 #outer-box {
-  margin: 5px;
-  border: 2px solid #3B4252;
-  background-color: #3B4252;
+  margin: 10px;
+  background-color: #161b22;
 }
 
 #entry:selected {
-  background-color: #4c566a;
-  border-radius: 0;
+  background-color: #1f6feb;
 }
   
 #scroll {
@@ -34,6 +39,10 @@ window {
   
 #text {
   margin: 5px;
-  color: #ECEFF4;
+  color: #8b949e;
   background-color: transparent;
+}
+
+#text:selected, #img {
+  color: #ffffff;
 }
