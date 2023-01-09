@@ -34,10 +34,11 @@
         "all-outputs": false,
         "format": "{icon} {name}", 
         "format-icons": {
-            "3:web": "",
-            "2:code": "",
-            "1:work": "",
-            "4:music": "",
+            "1:www": "",
+            "2:editor": "",
+            "3:messengers": "",
+            "4:terminals": "",
+            "5:music": "",
             "urgent": "",
             "focused": "",
             "default": ""

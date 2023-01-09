@@ -55,15 +55,15 @@ client.unfocused         #161b22 #010409 #6e7681 #161b22
 client.urgent            #58a6ff #58a6ff #c9d1d9 #58a6ff
 
 for_window {
-  [app_id="Alacritty"] move container to workspace $ws2
-  [class="Google-chrome"] move container to workspace $ws3
-  [app_id="chromium"] move container to workspace $ws3
-  [app_id="firefox"] move container to workspace $ws3
-  [app_id="firefox-developer-edition"] move container to workspace $ws3
+  [app_id="Alacritty"] move container to workspace $ws4
+  [class="Google-chrome"] move container to workspace $ws1
+  [app_id="chromium"] move container to workspace $ws1
+  [app_id="firefox"] move container to workspace $ws1
+  [app_id="firefox-developer-edition"] move container to workspace $ws1
   [class="Code"] move container to workspace $ws2
-  [class="Slack"] move container to workspace $ws1
-  [class="discord"] move container to workspace $ws1
-  [instance="spotify"] move container to workspace $ws4
+  [class="Slack"] move container to workspace $ws3
+  [class="discord"] move container to workspace $ws3
+  [instance="spotify"] move container to workspace $ws5
 }
 
 ### Idle configuration
@@ -125,11 +125,11 @@ input {
 #
 # Workspaces name
 #
-set $ws1 1:work
-set $ws2 2:code
-set $ws3 3:web
-set $ws4 4:music
-set $ws5 5
+set $ws1 1:www
+set $ws2 2:editor
+set $ws3 3:messengers
+set $ws4 4:terminals
+set $ws5 5:music
 set $ws6 6
 set $ws7 7
 set $ws8 8
