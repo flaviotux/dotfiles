@@ -24,8 +24,6 @@ set $menu onagre
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-set $external HDMI-A-2
-set $laptop eDP-1
 
 output * bg ~/.backgrounds/space-vector-wallpapers.png fill
 
@@ -35,17 +33,22 @@ output * bg ~/.backgrounds/space-vector-wallpapers.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-gaps inner 7
-default_border pixel 1
-# focus_on_window_activation focus
+set $external DP-1
+set $laptop eDP-1
 
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output {
-  $external mode 2560x1080@75Hz pos 1476,0
+  $external mode 3840x2160@60Hz pos 1476,0 scale 1.2
   $laptop mode 1920x1080@60Hz pos 0,0
 }
+
+gaps inner 7
+default_border pixel 1
+# focus_on_window_activation focus
+
+font pango:MesloLGS Nerd Font 14
 
 #colors:                 border  backgr. text     ind.
 client.focused           #30363d #0d1117 #c9d1d9 #30363d #30363d
@@ -55,14 +58,14 @@ client.unfocused         #161b22 #010409 #6e7681 #161b22
 client.urgent            #58a6ff #58a6ff #c9d1d9 #58a6ff
 
 for_window {
-  [app_id="Alacritty"] move container to workspace $ws4
+  [app_id="Alacritty"] move container to workspace $ws3
   [class="Google-chrome"] move container to workspace $ws1
   [app_id="chromium"] move container to workspace $ws1
   [app_id="firefox"] move container to workspace $ws1
   [app_id="firefox-developer-edition"] move container to workspace $ws1
   [class="Code"] move container to workspace $ws2
-  [class="Slack"] move container to workspace $ws3
-  [class="discord"] move container to workspace $ws3
+  [class="Slack"] move container to workspace $ws4
+  [class="discord"] move container to workspace $ws4
   [instance="spotify"] move container to workspace $ws5
 }
 
@@ -127,8 +130,8 @@ input {
 #
 set $ws1 1:www
 set $ws2 2:editor
-set $ws3 3:messengers
-set $ws4 4:terminals
+set $ws3 3:terminals
+set $ws4 4:messengers
 set $ws5 5:music
 set $ws6 6
 set $ws7 7
@@ -338,9 +341,7 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1
 exec /opt/paloaltonetworks/globalprotect/PanGPA start
 
 # Gnome keyring daemon
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway SWAYSOCK
-
-exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
+exec dbus-update-activation-environment --systemd --all
 
 # Geoclue startup system
 exec /usr/lib/geoclue-2.0/demos/agent

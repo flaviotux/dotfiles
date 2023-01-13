@@ -35,8 +35,8 @@
         "format-icons": {
             "1:www": "",
             "2:editor": "",
-            "3:messengers": "",
-            "4:terminals": "",
+            "3:terminals": "",
+            "4:messengers": "",
             "5:music": "",
             "urgent": "",
             "focused": "",
