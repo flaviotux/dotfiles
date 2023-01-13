@@ -48,7 +48,7 @@ gaps inner 7
 default_border pixel 1
 # focus_on_window_activation focus
 
-font pango:MesloLGS Nerd Font 14
+font pango:Noto Sans 11
 
 #colors:                 border  backgr. text     ind.
 client.focused           #30363d #0d1117 #c9d1d9 #30363d #30363d
