@@ -53,6 +53,7 @@ neovim
 networkmanager
 noto-fonts
 noto-fonts-emoji
+noto-fonts-extra
 pacman
 patch
 pavucontrol
@@ -83,6 +84,8 @@ swayidle
 swaylock
 texinfo
 tmux
+ttf-fira-code
+ttf-fira-mono
 vim
 vulkan-intel
 waybar
