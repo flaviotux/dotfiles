@@ -30,7 +30,7 @@
 
     "sway/workspaces": {
         "disable-scroll": true,
-        "all-outputs": false,
+        "all-outputs": true,
         "format": "{icon} {name}", 
         "format-icons": {
             "1:www": "",
@@ -40,7 +40,8 @@
             "5:music": "",
             "urgent": "",
             "focused": "",
-            "default": ""
+            "default": "",
+	    "high-priority-named": ["1:www", "2:editor", "3:terminals", "4:messengers", "5:music"]
         }
     },
 
@@ -83,7 +84,7 @@
     },
 
     "memory": {
-        "format": " {}%"
+        "format": "󰍛 {}%"
     },
 
     "temperature": {
@@ -106,10 +107,10 @@
         "interval": 20,
         "format": "{icon} {capacity}%",
         "format-icons": {
-            "plugged": "",
-            "charging": ["", "", "", "", "", "","", ""],
-            "empty": ["", "", "", "", "", "", "", "", "", ""],
-            "default": ["", "", "", "", "", "", "", "", "", ""]
+            "plugged": "󰂄",
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉","󰢞", "󰂋", "󰂅"],
+            "empty": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	    "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         },
         "states": {
             "warning": 30,
@@ -138,15 +139,15 @@
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%  {format_source}",
         "format-bluetooth-muted": "{icon} {volume}%  {format_source}",
-        "format-muted": "婢 {volume}% {format_source}",
+        "format-muted": "󰝟 {volume}% {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
-            "headset": "",
+            "headset": "󰋎",
             "phone": "",
-            "portable": "",
+            "portable": "󱡏",
             "car": "",
-            "default": ["", "", "墳", ""]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },

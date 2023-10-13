@@ -1,95 +1,18 @@
 /* Global color definitions */
+@import "macchiato.css";
 
-@define-color window_bg_color #0d1117;
-@define-color window_fg_color #c9d1d9;
-@define-color view_bg_color @window_bg_color;
+@define-color window_bg_color @crust;
+@define-color window_fg_color @text;
+@define-color view_bg_color @mantle;
 @define-color view_fg_color @window_fg_color;
-@define-color accent_bg_color #1f6feb;
-@define-color accent_color @accent_bg_color;
-@define-color headerbar_bg_color #161b22;
+@define-color accent_bg_color alpha(@mauve, 0.14);
+@define-color accent_color @mauve;
+@define-color headerbar_bg_color @base;
 @define-color headerbar_fg_color @window_fg_color;
-@define-color popover_bg_color #161b22;
+@define-color popover_bg_color @mantle;
 @define-color popover_fg_color @view_fg_color;
 @define-color dialog_bg_color @popover_bg_color;
 @define-color dialog_fg_color @popover_fg_color;
-@define-color card_bg_color #ffffff14;
+@define-color card_bg_color alpha(@overlay0, 0.14);
 @define-color card_fg_color @window_fg_color;
 
-/* More customizations */
-
-/* Remove rounded corners */
-.titlebar,
-.titlebar .background,
-window,
-window.background
-{
-  border-radius: 0;
-}
-
-/* Remove csd shadows */
-decoration, decoration:backdrop
-{
-  box-shadow: none;
-  border: 1px solid #30363d;
-}
-
-menu menuitem {
-  border-radius: 6px;
-  padding: 6px 0px;
-  margin: 0p;
-}
-
-button.titlebutton { /* GTK3 */
-  color: transparent;
-  min-width: 18px;
-  min-height: 18px;
-}
-button.titlebutton:backdrop {
-  opacity: 0.5;
-}
-
-windowcontrols > button { /* GTK4 */
-  color: transparent;
-  min-width: 2px;
-  min-height: 2px;
-  border-radius: 100%;
-  padding: 0;
-  margin: 0 5px;
-}
-
-windowcontrols > button > image {
-  padding: 0;
-}
-
-button.titlebutton.close,
-windowcontrols > button.close {
-  background-color: #474b52;
-  border: 1px solid #35393e;
-}
-
-button.titlebutton.close:hover,
-windowcontrols > button.close:hover {
-  opacity: 0.6;
-}
-
-button.titlebutton.maximize,
-windowcontrols > button.maximize {
-  background-color: #474b52;
-  border: 1px solid #35393e;
-}
-
-button.titlebutton.maximize:hover,
-windowcontrols > button.maximize:hover {
-  opacity: 0.6;
-}
-
-button.titlebutton.minimize,
-windowcontrols > button.minimize {
-  background-color: #474b52;
-  border: 1px solid #35393e;
-}
-
-button.titlebutton.minimize:hover,
-windowcontrols > button.minimize:hover {
-  opacity: 0.6;
-}

@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+include catppuccin-macchiato
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -51,11 +53,19 @@ default_border pixel 1
 font pango:Noto Sans 11
 
 #colors:                 border  backgr. text     ind.
-client.focused           #30363d #0d1117 #c9d1d9 #30363d #30363d
-client.focused_inactive  #21262d #010409 #6e7681 #21262d
-client.focused_tab_title #30363d #161b22 #c9d1d9
-client.unfocused         #161b22 #010409 #6e7681 #161b22
-client.urgent            #58a6ff #58a6ff #c9d1d9 #58a6ff
+#client.focused           #30363d #0d1117 #c9d1d9 #30363d #30363d
+#client.focused_inactive  #21262d #010409 #6e7681 #21262d
+#client.focused_tab_title #30363d #161b22 #c9d1d9
+#client.unfocused         #161b22 #010409 #6e7681 #161b22
+#client.urgent            #58a6ff #58a6ff #c9d1d9 #58a6ff
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 for_window {
   [app_id="Alacritty"] move container to workspace $ws3
@@ -292,12 +302,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+set $volume /home/flaviotux/.config/sway/volume.sh
+
 #
 # Fn control
 #
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec $volume raise
+bindsym XF86AudioLowerVolume exec $volume lower
+bindsym XF86AudioMute exec $volume mute
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%

@@ -1,3 +1,5 @@
+@import "macchiato.css";
+
 * {
   font-family: MesloLGS Nerd Font, Noto Sans, monospace;
   font-size: 14px;
@@ -5,8 +7,8 @@
 }
 
 window#waybar {
-  background-color: #0d1117;
-  border-bottom: solid 1px #30363d;
+  background-color: @crust;
+  border-bottom: 1px solid @overlay0;
 }
 
 #clock,
@@ -27,7 +29,7 @@ window#waybar {
 #custom-spotify,
 #idle_inhibitor
 {
-  color: #c9d1d9;
+  color: @text;
   padding: 0px 10px;
   margin: 0;
 }
@@ -47,12 +49,12 @@ window#waybar {
 #idle_inhibitor,
 #pulseaudio
 {
-  background-color: #161b22;
+  background-color: @base;
   margin-bottom: 1px;
 }
 
 #window {
-  color: #c9d1d9;
+  color: @text;
 }
 
 #window label {
@@ -70,7 +72,7 @@ window#waybar {
 #workspaces button {
   padding: 4px 0px 5px;
   margin: 0px 5px 0px -2px;
-  color: #8b949e;
+  color: @subtext0;
   font-weight: 500;
   background-color: transparent;
 }
@@ -80,19 +82,19 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  color: #c9d1d9;
+  color: @text;
   border-color: transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  color: #c9d1d9;
-  border-bottom: 2px solid #f78166;
+  color: @text;
+  border-bottom: 1px solid @mauve;
 }
 
 #workspaces button.urgent label {
-  color: #58a6ff;
-  background-color: rgba(56,139,253,0.15);
+  color: @peach;
+  background-color: alpha(@peach, 0.12);
 }
 
 #workspaces button label {
@@ -102,7 +104,7 @@ window#waybar {
 }
 
 #workspaces button:hover:not(.urgent) label {
-  background-color: rgba(177,186,196,0.12);
+  background-color: alpha(@overlay0, 0.12);
 }
 
 #custom-right,
@@ -118,39 +120,39 @@ window#waybar {
 }
 
 #custom-right {
-  background-color: #161b22; 
-  color: #c9d1d9;
+  background-color: @base; 
+  color: @text;
 }
 
 #custom-right2 {
-  color: #161b22; 
+  color: @base; 
 }
 
 #custom-left {
-  color: #0d1117;
-  background-color: #161b22;
+  color: @crust;
+  background-color: @base;
   margin-bottom: 1px;
 }
 
 #custom-left2, #custom-left4 {
-  color: #c9d1d9;
+  color: @text;
 }
 
 #custom-left3 {
-  color: #161b22;
+  color: @base;
 }
 
 #custom-left4 {
-  background-color: #161b22;
+  background-color: @base;
 }
 
 #battery.charging {
-  color: #34d058;
+  color: @green;
 }
 
 @keyframes blink {
   to {
-    color: #f85149;
+    color: @red;
   }
 }
 
